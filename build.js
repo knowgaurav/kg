@@ -15,20 +15,17 @@ const options = {
 
 // Text + chalk definitions
 const data = {
-  name: chalk.white('           Tierney Cyren'),
-  handle: chalk.white('bitandbang'),
-  shorthandle: chalk.white('bnb'),
-  work: chalk.white('Principal Developer Advocate at Twilio (::)'),
-  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('bitandbang'),
-  mastodon: chalk.gray('https://mastodon.social/') + chalk.magenta('@bnb'),
-  npm: chalk.gray('https://npmjs.com/') + chalk.red('~bnb'),
-  github: chalk.gray('https://github.com/') + chalk.green('bnb'),
-  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('bitandbang'),
-  web: chalk.cyan('https://bnb.im'),
-  npx: chalk.red('npx') + ' ' + chalk.white('bitandbang'),
+  name: chalk.white('           Gaurav Singh'),
+  handle: chalk.white('knowgaurav'),
+  work: chalk.white('Associate Data Engineer at Shell'),
+  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('knowgaurav01'),
+  npm: chalk.gray('https://npmjs.com/') + chalk.red('~knowgaurav'),
+  github: chalk.gray('https://github.com/') + chalk.green('knowgaurav'),
+  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('knowgaurav'),
+  web: chalk.cyan('https:/sgaurav.me'),
+  npx: chalk.red('npx') + ' ' + chalk.white('knowgaurav'),
   labelWork: chalk.white.bold('    Work:'),
   labelTwitter: chalk.white.bold(' Twitter:'),
-  labelMastodon: chalk.white.bold('Mastodon:'),
   labelnpm: chalk.white.bold('     npm:'),
   labelGitHub: chalk.white.bold('  GitHub:'),
   labelLinkedIn: chalk.white.bold('LinkedIn:'),
@@ -38,10 +35,9 @@ const data = {
 
 // Actual strings we're going to output
 const newline = '\n'
-const heading = `${data.name} / ${data.handle} / ${data.shorthandle}`
+const heading = `${data.name} / ${data.handle}`
 const working = `${data.labelWork}  ${data.work}`
 const twittering = `${data.labelTwitter}  ${data.twitter}`
-const mastodoning = `${data.labelMastodon}  ${data.mastodon}`
 const npming = `${data.labelnpm}  ${data.npm}`
 const githubing = `${data.labelGitHub}  ${data.github}`
 const linkedining = `${data.labelLinkedIn}  ${data.linkedin}`
@@ -50,14 +46,13 @@ const carding = `${data.labelCard}  ${data.npx}`
 
 // Put all our output together into a single variable so we can use boxen effectively
 const output = heading + // data.name + data.handle
-               newline + newline + // Add one whole blank line
-               working + newline + // data.labelWork + data.work
-               twittering + newline + // data.labelTwitter + data.twitter
-               mastodoning + newline + // data.labelTwitter + data.twitter
-               npming + newline + // data.labelnpm + data.npm
-               githubing + newline + // data.labelGitHub + data.github
-               linkedining + newline + // data.labelLinkedIn + data.linkedin
-               webing + newline + newline + // data.labelWeb + data.web
-               carding // data.labelCard + data.npx
+  newline + newline + // Add one whole blank line
+  working + newline + // data.labelWork + data.work
+  twittering + newline + // data.labelTwitter + data.twitter
+  npming + newline + // data.labelnpm + data.npm
+  githubing + newline + // data.labelGitHub + data.github
+  linkedining + newline + // data.labelLinkedIn + data.linkedin
+  webing + newline + newline + // data.labelWeb + data.web
+  carding // data.labelCard + data.npx
 
 fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.green(boxen(output, options)))

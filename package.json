@@ -1,6 +1,6 @@
 {
   "name": "knowgaurav",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "A personal card for Gaurav Singh (@knowgaurav01)",
   "main": "/bin/card.js",
   "bin": {
